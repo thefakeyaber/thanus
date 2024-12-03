@@ -86,34 +86,69 @@ h2, h3 {
     color: #00c4cc;
 }
 
-/* Styling the Audio Player */
-audio {
-    width: 100%;
+/* Styling the Audio Container */
+.audio-container {
+    position: relative;
     margin-top: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    padding: 5px;
     background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: block;
 }
 
-/* Styling the Download Link */
-.project ul li a {
-    font-size: 1em;
-    color: #333;
+audio {
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+/* Styling the Download Button */
+.audio-actions {
     margin-top: 10px;
+    text-align: center;
+}
+
+.download-btn {
     display: inline-block;
-    padding: 8px 15px;
-    background-color: #007bff;
+    padding: 10px 20px;
+    background-color: #f76c6c; /* Changed to a contrasting color (red) */
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.project ul li a:hover {
-    background-color: #0056b3;
+.download-btn:hover {
+    background-color: #e64e4e; /* Darker red for hover effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* General Project Section Styling */
+.project ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project ul li {
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #00c4cc;
 }
 
 /* About Section */
@@ -161,5 +196,14 @@ footer p {
 
     .project ul li a {
         padding: 10px 20px;
+    }
+
+    /* Audio Player adjustments for smaller screens */
+    .audio-container {
+        padding: 10px;
+    }
+
+    .download-btn {
+        padding: 8px 18px;
     }
 }
